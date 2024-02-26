@@ -5,21 +5,21 @@ const words = `Community of coders who programs reality.`
 
 const Hero = () => {
   return (
-    <section className="pt-10 bg-gradient-to-r from gray-00 to-gray-200 space-y-10 mt-16">
+    <section className="pt-8 my-16 sm:my-20 lg:my-6 bg-gradient-to-r from gray-00 to-gray-200 space-y-10">
         <div className="container mx-auto text-center">
 
-          <div className="mx-auto max-w-2xl lg:py-14">
-            <div className="hidden sm:mb-8 sm:flex sm:justify-center" data-aos="fade-in">
+          <div className="mx-auto mt-32 sm:mt-12 max-w-2xl lg:py-14">
+            <div className="flex justify-center sm:flex sm:justify-center" data-aos="fade-in">
               <div className="relative rounded-full px-3 py-1  text-sm leading-6 text-gray-500 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                By Team The Xiting Way.{' '}
+                By The Xiting Way.{' '}
                 <a href="https://www.thexitingway.com/" className="font-semibold text-indigo-600" >
                   <span className="absolute inset-0" aria-hidden="true" />
                   Read more <span aria-hidden="true">&rarr;</span>
                 </a>
               </div>
             </div>
-            <div className="text-center p-6 mt-12 sm:p-0 sm:mt-0">
-              <h1 className="text-6xl font-bold tracking-tight text-gradient bg-gradient-to-r from-purple-500 to-green-300 bg-clip-text text-transparent  sm:text-7xl" data-aos="fade-in" >
+            <div className="text-center px-6 sm:p-0">
+              <h1 className="text-7xl font-bold tracking-tight text-gradient bg-gradient-to-r from-purple-500 to-green-300 bg-clip-text text-transparent  sm:text-9xl" data-aos="fade-in" >
                 DevXClub
               </h1>
               <TextGenerateEffect words={words} />
