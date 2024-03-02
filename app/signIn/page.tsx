@@ -1,8 +1,7 @@
-import backImg from '../../public/assets/backImg.png'
+import backImg from '../../public/assets/backImgg.png'
 import { IoIosArrowForward } from "react-icons/io";
+import { WavyBackground } from "../components/ui/wavy-background";
 import Image from 'next/image';
-
-
 
 const SignIn = () => {
     return (
@@ -10,6 +9,7 @@ const SignIn = () => {
             <div className='relative'>
                 <Image src={backImg} alt="backImg" className='w-full h-screen bg-contain' />
 
+                {/* First Div */}
                 <div className='z-50 bg-[#020617] rounded-2xl border-[#151823] border-solid border-[2px] shadow-2xl absolute top-[8%] left-28 w-[39%] h-[85%]'>
 
                     <div>
@@ -49,11 +49,19 @@ const SignIn = () => {
                         <div className='flex m-auto items-center justify-center text-xs text-center mt-[86px]'>
                             <p className='text-[#64748B]'>By logging in or signing up using the options above, you agree to <br />DevXClub Terms & Conditions and Privacy Policy</p>
                         </div>
-
-
-
-
                     </div>
+                </div>
+
+                {/* Second Div */}
+                <div className='absolute top-0 right-0 bg-transparent h-auto w-auto overflow-hidden'>
+                    <WavyBackground className="max-w-4xl bg-transparent mx-auto pb-40">
+                        <p className="text-2xl md:text-4xl lg:text-7xl text-white font-bold inter-var text-center">
+                            Hero waves are cool
+                        </p>
+                        <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center">
+                            Leverage the power of canvas to create a beautiful hero section
+                        </p>
+                    </WavyBackground>
                 </div>
             </div>
         </>
