@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 
-const words = `Community of coders who programs reality.`
+const words = `We build stuff together.`
 
 const Hero = () => {
   return (

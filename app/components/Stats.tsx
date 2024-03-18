@@ -3,7 +3,7 @@ import React from 'react';
 
 const Numbers = () => {
     return (
-        <section className="py-10 mt-4 bg-gradient-to-r from gray-00 to-gray-200 sm:py-16 lg:py-24">
+        <section className="py-10 bg-gradient-to-r from gray-00 to-gray-200 sm:py-16 lg:py-24">
             <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
                 <div className="max-w-2xl mx-auto text-center">
                     <h2 className="text-3xl font-bold leading-tight text-gray-300 sm:text-4xl lg:text-5xl">Numbers tell our story</h2>
