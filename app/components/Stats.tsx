@@ -7,7 +7,7 @@ const Numbers = () => {
             <div className="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8">
                 <div className="max-w-2xl mx-auto text-center">
                     <h2 className="text-3xl font-bold leading-tight text-gray-300 sm:text-4xl lg:text-5xl">Numbers tell our story</h2>
-                    <p className="mt-3 text-xl leading-relaxed text-gray-500 md:mt-8">We've many who are like us and like you.</p>
+                    <p className="mt-3 text-xl leading-relaxed text-gray-500 md:mt-8">We have many who are like us and like you.</p>
                 </div>
 
                 <div className="grid grid-cols-1 gap-8 mt-10 text-center lg:mt-24 sm:gap-x-8 md:grid-cols-3">
