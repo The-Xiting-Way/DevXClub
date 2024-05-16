@@ -21,10 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          <div className="fixed top-6 flex justify-between">
-            <Mode />
-          </div>{" "}
-          {children}
+          <div className="fixed top-6 flex justify-between"></div> {children}
         </ThemeProvider>
       </body>
     </html>
