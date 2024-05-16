@@ -22,34 +22,34 @@ const Footer: React.FC = () => {
 
                     <div className="flex mt-6 -mx-2">
                         <Link href="#"
-                            className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                            className="mx-2 text-gray-600 transition-colors duration-300"
                             aria-label="Reddit">
                             <FaReddit />
                         </Link>
                     
                         <Link href="#"
-                            className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                            className="mx-2 text-gray-600 transition-colors duration-300"
                             aria-label="Facebook">
                            <FaFacebook />
                         </Link>
                     
                         <Link href="#"
-                            className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                            className="mx-2 text-gray-600 transition-colors duration-300"
                             aria-label="Github">
                            <FaGithub />
                         </Link>
                         <Link href="#"
-                            className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                            className="mx-2 text-gray-600 transition-colors duration-300"
                             aria-label="Github">
                            <RiTwitterXLine />
                         </Link>
                         <Link href="#"
-                            className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                            className="mx-2 text-gray-600 transition-colors duration-300"
                             aria-label="Github">
                             <FaYoutube />
                         </Link>
                         <Link href="#"
-                            className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                            className="mx-2 text-gray-600 transition-colors duration-300"
                             aria-label="Github">
                             <FaSlack />
                         </Link>
