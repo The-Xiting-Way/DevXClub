@@ -17,7 +17,7 @@ export function Mode() {
           }}
           variant="link"
         >
-          <FaMoon className="w-6 h-6 text-black" />
+          <FaMoon className="w-8 h-8 text-black" />
         </Button>
       ) : (
         <Button
@@ -27,7 +27,7 @@ export function Mode() {
           }}
           variant="link"
         >
-          <FaSun className="w-6 h-6 text-black dark:text-white" />
+          <FaSun className="w-8 h-8 text-black dark:text-white" />
         </Button>
       )}
 
