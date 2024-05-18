@@ -2,6 +2,8 @@ import React from "react";
 import { FloatingNav } from "./ui/floating-navbar";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 import { getCurrentUser } from "../lib/session";
+import { UserNav } from "./user-nav";
+import { Mode } from "./Mode";
 export async function Navbar() {
   const user = await getCurrentUser();
   const navItems = [
@@ -24,13 +26,27 @@ export async function Navbar() {
     },
   ];
   return (
-    <FloatingNav
-      user={{
-        name: user?.name,
-        image: user?.image,
-        email: user?.email,
-      }}
-      navItems={navItems}
-    />
+    <>
+      <div className="fixed top-7 left-5 flex justify-end items-end">
+        <Mode />
+      </div>
+      <FloatingNav
+        user={{
+          name: user?.name,
+          image: user?.image,
+          email: user?.email,
+        }}
+        navItems={navItems}
+      />
+      <div className="fixed top-7 right-5 flex justify-end items-end">
+        <UserNav
+          user={{
+            name: user?.name,
+            image: user?.image,
+            email: user?.email,
+          }}
+        />
+      </div>
+    </>
   );
 }

@@ -9,6 +9,7 @@ interface UserAvatarProps extends AvatarProps {
 }
 
 export function UserAvatar({ user, ...props }: UserAvatarProps) {
+  // console.log(user.image);
   return (
     <div className="flex items-center">
       <Avatar {...props}>
