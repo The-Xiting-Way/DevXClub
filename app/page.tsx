@@ -4,7 +4,7 @@ import { Navbar } from "./components/Navbar";
 import { ScrollSection } from "./components/ScrollSection";
 import Numbers from "./components/Stats";
 import HowItWorks from "./components/Steps";
-
+import Footer from "./components/Footer";
 export default function Home() {
   return (
    <>
@@ -14,6 +14,7 @@ export default function Home() {
    <HowItWorks/>
    <ScrollSection/>
    <Numbers/>
+    <Footer />
    </>
   );
 }
