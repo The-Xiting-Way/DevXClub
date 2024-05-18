@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { User } from "next-auth";
 import {
   motion,
   AnimatePresence,
@@ -8,24 +9,24 @@ import {
 } from "framer-motion";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
-
-export const FloatingNav = ({
-  navItems,
-  className,
-}: {
+import { UserNav } from "../user-nav";
+import { Mode } from "../Mode";
+interface NavbarProps extends React.HTMLAttributes<HTMLDivElement> {
+  user: Pick<User, "name" | "image" | "email">;
   navItems: {
     name: string;
     link: string;
     icon?: JSX.Element;
   }[];
   className?: string;
-}) => {
+}
+
+export const FloatingNav = ({ user, navItems, className }: NavbarProps) => {
   const { scrollYProgress } = useScroll();
 
   const [visible, setVisible] = useState(true);
 
-  useMotionValueEvent(scrollYProgress
-    , "change", (current) => {
+  useMotionValueEvent(scrollYProgress, "change", (current) => {
     let direction = current - (scrollYProgress.getPrevious() as number);
 
     if (scrollYProgress.get() < 0.05) {
@@ -57,6 +58,8 @@ export const FloatingNav = ({
           className
         )}
       >
+        {" "}
+        <Mode />
         {navItems.map((navItem: any, idx: number) => (
           <Link
             key={`link=${idx}`}
@@ -69,14 +72,13 @@ export const FloatingNav = ({
             <span className="hidden sm:block text-sm">{navItem.name}</span>
           </Link>
         ))}
-        <button className="border bg-gradient-to-r from-blue-200 via-blue-500 hover:bg-gradient-to-r hover:from-blue-900 hover:via-blue-400  text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
-          <span>Login</span>
-          
-        </button>
-        <button className="border hover:bg-gradient-to-r hover:from-blue-900 hover:via-blue-400 bg-gradient-to-r from-blue-200 via-blue-500  text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
-          <span>SignUp</span>
-          
-        </button>
+        <UserNav
+          user={{
+            name: user?.name,
+            image: user?.image,
+            email: user?.email,
+          }}
+        />
       </motion.div>
     </AnimatePresence>
   );

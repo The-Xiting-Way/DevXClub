@@ -1,8 +1,9 @@
-"use client";
 import React from "react";
 import { FloatingNav } from "./ui/floating-navbar";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
-export function Navbar() {
+import { getCurrentUser } from "../lib/session";
+export async function Navbar() {
+  const user = await getCurrentUser();
   const navItems = [
     {
       name: "Home",
@@ -23,6 +24,13 @@ export function Navbar() {
     },
   ];
   return (
-      <FloatingNav navItems={navItems} />
+    <FloatingNav
+      user={{
+        name: user?.name,
+        image: user?.image,
+        email: user?.email,
+      }}
+      navItems={navItems}
+    />
   );
 }
