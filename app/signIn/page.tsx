@@ -23,6 +23,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useForm } from "react-hook-form";
+import Link from "next/link";
 const FormSchema = z.object({
   email: z.string().email({ message: "Please enter a valid email!" }),
 });
@@ -54,12 +55,13 @@ const SignIn = () => {
         <div className="z-50 bg-[#020617] rounded-2xl border-[#151823] border-solid border-[2px] shadow-2xl absolute top-[8%] left-28 w-[39%] h-[85%]">
           <div>
             <div className=" flex m-auto items-center justify-center mt-[67px]">
-              <h1
+              <Link
+                href={"/"}
                 className="text-4xl font-bold tracking-tight text-gradient bg-gradient-to-r from-[#8c6ac2] to-green-300 bg-clip-text text-transparent  sm:text-5xl"
                 data-aos="fade-in"
               >
                 DevXClub
-              </h1>
+              </Link>
             </div>
 
             <p className="font-semibold text-[18px] text-white text-center mt-10">
@@ -68,7 +70,7 @@ const SignIn = () => {
 
             <div className="w-[80%] mt-4 flex items-center justify-center m-auto text-center">
               <Button
-                className="flex p-3 text-white rounded-full w-full bg-[#2563EB] items-center justify-center gap-3 text-center"
+                className="flex p-3 text-white rounded-full w-full bg-[#2563EB] hover:text-black items-center justify-center gap-3 text-center"
                 onClick={async () => {
                   await signIn("google", { callbackUrl: "/" });
                 }}
@@ -80,14 +82,14 @@ const SignIn = () => {
                   alt="metamask"
                   className="h-6 w-6"
                 />
-                <span className="flex items-center justify-center">
+                <span className="flex items-center justify-center ">
                   Continue with Google
                 </span>
               </Button>
             </div>
             <div className="w-[80%] mt-4 flex items-center justify-center m-auto text-center">
               <Button
-                className="flex p-3 text-white rounded-full w-full bg-[#2563EB] items-center justify-center gap-3 text-center"
+                className="flex p-3 text-white rounded-full hover:bg-gray-900 w-full bg-black items-center justify-center gap-3 text-center"
                 onClick={async () => {
                   await signIn("github", { callbackUrl: "/" });
                 }}
@@ -103,7 +105,7 @@ const SignIn = () => {
                 <Image
                   width={"100"}
                   height={"100"}
-                  src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-1024.png"
+                  src="https://cdn3.iconfinder.com/data/icons/picons-social/57/11-linkedin-256.png"
                   alt="metamask"
                   className="h-8 w-auto"
                 />
@@ -112,25 +114,7 @@ const SignIn = () => {
                 <Image
                   width={"100"}
                   height={"100"}
-                  src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"
-                  alt="metamask"
-                  className="h-8 w-auto"
-                />
-              </button>
-              <button className="flex items-center justify-center rounded-3xl bg-white hover:bg-transparent hover:border-white w-16 hover:transition-all hover:ease-in   border shadow-md">
-                <Image
-                  width={"100"}
-                  height={"100"}
-                  src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"
-                  alt="metamask"
-                  className="h-8 w-auto"
-                />
-              </button>
-              <button className="flex items-center justify-center rounded-3xl bg-white hover:bg-transparent hover:border-white w-16 hover:transition-all hover:ease-in   border shadow-md">
-                <Image
-                  width={"100"}
-                  height={"100"}
-                  src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"
+                  src="https://cdn3.iconfinder.com/data/icons/picons-social/57/03-twitter-64.png"
                   alt="metamask"
                   className="h-8 w-auto"
                 />
